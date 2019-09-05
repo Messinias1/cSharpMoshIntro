@@ -6,10 +6,7 @@ using System.Threading.Tasks;
 
 namespace HelloWorld
 {
-    class Program
+    class variablesconstants
     {
-        static void Main(string[] args)
-        { 
-        }
     }
 }
