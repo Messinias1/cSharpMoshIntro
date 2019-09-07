@@ -1,19 +1,23 @@
 ﻿using System;
+using HelloWorld.Math;
 
 namespace HelloWorld
 {
-    //class helloworld
-    //{
-    //    static void Main(string[] args)
-    //    {
-    //        Console.WriteLine("Hello World!");
-    //    }
-    //}
-
     class helloworld
     {
         static void Main(string[] args)
         {
+
+            var john = new Person();
+
+            john.FirstName = "John";
+            john.LastName = "Smith";
+            john.Introduce();
+
+            Calculator calculator = new Calculator();
+            var result = calculator.Add(1, 2);
+            Console.WriteLine(result);
+
             // variable types
 
             //byte number = 2;
@@ -79,7 +83,7 @@ namespace HelloWorld
             //catch (Exception)
             //{
             //    Console.WriteLine("The number could not be converted to a byte");
-            //}
+            //
         }
     }
 }
