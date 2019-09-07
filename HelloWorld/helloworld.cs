@@ -7,18 +7,54 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
+            // STRINGS
+            var firstName = "Carl";
+            var lastName = "Kakisis";
 
-            var john = new Person();
+            var fullName = firstName + " " + lastName;
+            var myFullName = string.Format("{0}", fullName);
+            Console.WriteLine(myFullName);
 
-            john.FirstName = "John";
-            john.LastName = "Smith";
-            john.Introduce();
+            var names = new string[3] { "Carl", "Bob", "Chris" };
+            var formattedNames = string.Join(",", names);
+            Console.WriteLine(formattedNames);
 
-            Calculator calculator = new Calculator();
-            var result = calculator.Add(1, 2);
-            Console.WriteLine(result);
+            var text = @"Yo
+Carl
+Whats Up!";
+            Console.WriteLine(text);
 
-            // variable types
+            // ARRAYS
+
+            //var numbers = new int[3];
+            //numbers[0] = 1;
+            //Console.WriteLine(numbers[0]);
+            //Console.WriteLine(numbers[1]);
+            //Console.WriteLine(numbers[2]);
+
+            //var flags = new bool[3];
+            //flags[0] = true;
+            //Console.WriteLine(flags[0]);
+            //Console.WriteLine(flags[1]);
+            //Console.WriteLine(flags[2]);
+
+            //var names = new string[3] { "jack", "jill", "mary" };
+            //foreach (var name in names)
+            //{
+            //    Console.WriteLine(name.ToString());
+            //}
+
+            //var john = new Person();
+
+            //john.FirstName = "John";
+            //john.LastName = "Smith";
+            //john.Introduce();
+
+            //Calculator calculator = new Calculator();
+            //var result = calculator.Add(1, 2);
+            //Console.WriteLine(result);
+
+            // VARIABLE TYPES
 
             //byte number = 2;
             //int count = 10;
@@ -27,7 +63,7 @@ namespace HelloWorld
             //string firstName = "Carl";
             //bool isWorking = true;
 
-            // var keyword
+            // var KEYWORD
 
             //var number = 2;
             //var count = 10;
@@ -43,22 +79,22 @@ namespace HelloWorld
             //Console.WriteLine(firstName);
             //Console.WriteLine(isWorking);
 
-            // placeholders and values
+            // PLACEHOLDERS AND VALUES
 
             //Console.WriteLine("{0} {1}", byte.MinValue, byte.MaxValue);
             //Console.WriteLine("{0} {1}", float.MinValue, float.MaxValue);
 
-            // const keyword
+            // const KEYWORD
 
             //const float Pi = 3.14f;
 
-            // implicit declaration
+            // IMPLICIT DECLARATION
 
             //byte b = 1;
             //int i = b;
             //Console.WriteLine(i);
 
-            // explicit declaration (can cause overflow)
+            // EXPLICIT DECLARATION (can cause overflow)
 
             //int i = 1000;
             //byte b = (byte)i;
