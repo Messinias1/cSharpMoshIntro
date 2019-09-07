@@ -14,17 +14,72 @@ namespace HelloWorld
         static void Main(string[] args)
         {
 
-            var method = ShippingMethod.Express;
-            Console.WriteLine((int)method);
+            int hour = 22;
 
-            var methodId = 2;
-            Console.WriteLine((ShippingMethod)methodId);
+            if (hour > 0 && hour < 12)
+            {
+                Console.WriteLine("It's morning.");
+            }
+            else if (hour >= 12 && hour < 18)
+            {
+                Console.WriteLine("Afternoon");
+            }
+            else
+                Console.WriteLine("It's evening");
 
-            Console.WriteLine(method.ToString());
+            bool isGoldCustomer = true;
 
-            var methodName = "Express";
-            var shippingMethod = (ShippingMethod)Enum.Parse(typeof(ShippingMethod), methodName);
-            Console.WriteLine(shippingMethod);
+            float price = (isGoldCustomer) ? 19.95f : 29.95f;
+            Console.WriteLine(price);
+
+            var season = Season.Autumn;
+
+            switch (season)
+            {
+                case Season.Spring:
+                    Console.WriteLine("It's Spring");
+                    break;
+                case Season.Summer:
+                    Console.WriteLine("It's Summer");
+                    break;
+                case Season.Autumn:
+                    Console.WriteLine("It's Autumn");
+                    break;
+                case Season.Winter:
+                    Console.WriteLine("It's Winter");
+                    break;
+                default:
+                    Console.WriteLine("Which season is it?");
+                    break;
+            }
+
+            // VALUE TYPE
+
+            //var a = 10;
+            //var b = a;
+            //b++;
+            //Console.WriteLine(string.Format("a: {0}, b: {1}", a, b));
+
+            // REFERENCE TYPE
+
+            //var array1 = new int[3] { 1, 2, 3 };
+            //var array2 = array1;
+            //array2[0] = 0;
+            //Console.WriteLine(string.Format("array1[0]: {0}, array2[0]: {1}", array1[0], array2[0]));
+
+            // ENUMS
+
+            //var method = ShippingMethod.Express;
+            //Console.WriteLine((int)method);
+
+            //var methodId = 2;
+            //Console.WriteLine((ShippingMethod)methodId);
+
+            //Console.WriteLine(method.ToString());
+
+            //var methodName = "Express";
+            //var shippingMethod = (ShippingMethod)Enum.Parse(typeof(ShippingMethod), methodName);
+            //Console.WriteLine(shippingMethod);
 
             // STRINGS
 //            var firstName = "Carl";
