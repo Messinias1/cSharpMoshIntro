@@ -3,26 +3,45 @@ using HelloWorld.Math;
 
 namespace HelloWorld
 {
+    public enum ShippingMethod
+    {
+        RegularAirMail = 1,
+        RegisteredAirMail = 2,
+        Express = 3
+    }
     class helloworld
     {
         static void Main(string[] args)
         {
+
+            var method = ShippingMethod.Express;
+            Console.WriteLine((int)method);
+
+            var methodId = 2;
+            Console.WriteLine((ShippingMethod)methodId);
+
+            Console.WriteLine(method.ToString());
+
+            var methodName = "Express";
+            var shippingMethod = (ShippingMethod)Enum.Parse(typeof(ShippingMethod), methodName);
+            Console.WriteLine(shippingMethod);
+
             // STRINGS
-            var firstName = "Carl";
-            var lastName = "Kakisis";
+//            var firstName = "Carl";
+//            var lastName = "Kakisis";
 
-            var fullName = firstName + " " + lastName;
-            var myFullName = string.Format("{0}", fullName);
-            Console.WriteLine(myFullName);
+//            var fullName = firstName + " " + lastName;
+//            var myFullName = string.Format("{0}", fullName);
+//            Console.WriteLine(myFullName);
 
-            var names = new string[3] { "Carl", "Bob", "Chris" };
-            var formattedNames = string.Join(",", names);
-            Console.WriteLine(formattedNames);
+//            var names = new string[3] { "Carl", "Bob", "Chris" };
+//            var formattedNames = string.Join(",", names);
+//            Console.WriteLine(formattedNames);
 
-            var text = @"Yo
-Carl
-Whats Up!";
-            Console.WriteLine(text);
+//            var text = @"Yo
+//Carl
+//Whats Up!";
+//            Console.WriteLine(text);
 
             // ARRAYS
 
