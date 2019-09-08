@@ -18,13 +18,34 @@ class helloworld
 
         //  Write a program to count how many numbers between 1 and 100 are divisible by 3 with no remainder. Display the count on the console.
 
-        for (var i = 0; i < 100; i++)
+        //for (var i = 0; i < 100; i++)
+        //{
+        //    if(i%3 == 0)
+        //    {
+        //        Console.WriteLine(i);
+        //    }
+        //}
+
+        // Write a program and continuously ask the user to enter a number or "ok" to exit. Calculate the sum of all the previously entered numbers and display it on the console.
+
+        void Exercise2()
         {
-            if(i%3 == 0)
+            var total = 0;
+            while (true)
             {
-                Console.WriteLine(i);
+                Console.WriteLine("Enter a number (or 'ok' to exit): ");
+                var input = Console.ReadLine();
+
+                if (input.ToLower() == "ok")
+                    break;
+
+                total += Convert.ToInt32(input);
             }
+            Console.WriteLine("Total of all entered numbers: " + total);
         }
+
+        Exercise2();
+        
 
 
         //Console.WriteLine("Enter Speed Limit");
