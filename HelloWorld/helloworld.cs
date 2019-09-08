@@ -28,24 +28,39 @@ class helloworld
 
         // Write a program and continuously ask the user to enter a number or "ok" to exit. Calculate the sum of all the previously entered numbers and display it on the console.
 
-        void Exercise2()
+        //void Exercise2()
+        //{
+        //    var total = 0;
+        //    while (true)
+        //    {
+        //        Console.WriteLine("Enter a number (or 'ok' to exit): ");
+        //        var input = Console.ReadLine();
+
+        //        if (input.ToLower() == "ok")
+        //            break;
+
+        //        total += Convert.ToInt32(input);
+        //    }
+        //    Console.WriteLine("Total of all entered numbers: " + total);
+        //}
+
+        //Exercise2();
+
+        // Write a program and ask the user to enter a number. Compute the factorial of the number and print it on the console. For example, if the user enters 5, the program should calculate 5 x 4 x 3 x 2 x 1 and display it as 5! = 120.
+
+        void Exercise3()
         {
-            var total = 0;
-            while (true)
+            Console.WriteLine("Enter a number");
+            var input = Convert.ToInt32(Console.ReadLine());
+
+            for (var i = input - 1; i >= 1; i--)
             {
-                Console.WriteLine("Enter a number (or 'ok' to exit): ");
-                var input = Console.ReadLine();
-
-                if (input.ToLower() == "ok")
-                    break;
-
-                total += Convert.ToInt32(input);
+                input = input * i;
             }
-            Console.WriteLine("Total of all entered numbers: " + total);
+            Console.WriteLine("\nFactorial of Given Number is: " + input);
         }
+        Exercise3();
 
-        Exercise2();
-        
 
 
         //Console.WriteLine("Enter Speed Limit");
