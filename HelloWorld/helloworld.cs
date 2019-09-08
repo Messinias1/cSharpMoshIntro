@@ -16,23 +16,40 @@ class helloworld
     static void Main(string[] args)
         {
 
-        Console.WriteLine("Enter a number");
-        var input = Console.ReadLine();
-        Console.WriteLine("Enter Another Number");
-        var input2 = Console.ReadLine();
-        
-        
+        // Write a program and ask the user to enter the width and height of an image. Then tell if the image is landscape or portrait. landscape = wider portrait = taller
 
-        if(Int32.Parse(input) > Int32.Parse(input2))
+        Console.WriteLine("Enter image height");
+        var height = Console.ReadLine();
+
+        Console.WriteLine("Enter image width");
+        var width = Console.ReadLine();
+
+        if(Int32.Parse(height) > Int32.Parse(width))
         {
-            Console.WriteLine("First number is larger", input);
+            Console.WriteLine("Image is a Portrait");
         }
-        else if(Int32.Parse(input2) > Int32.Parse(input))
+        else if(Int32.Parse(width) > Int32.Parse(height))
         {
-            Console.WriteLine("Second number is larger", input2);
+            Console.WriteLine("Image is a Landscape");
         }
-        else
-            Console.WriteLine("Invalid");
+
+        //Console.WriteLine("Enter a number");
+        //var input = Console.ReadLine();
+        //Console.WriteLine("Enter Another Number");
+        //var input2 = Console.ReadLine();
+
+
+
+        //if(Int32.Parse(input) > Int32.Parse(input2))
+        //{
+        //    Console.WriteLine("First number is larger", input);
+        //}
+        //else if(Int32.Parse(input2) > Int32.Parse(input))
+        //{
+        //    Console.WriteLine("Second number is larger", input2);
+        //}
+        //else
+        //    Console.WriteLine("Invalid");
 
 
 
@@ -219,4 +236,4 @@ class helloworld
         //    Console.WriteLine("The number could not be converted to a byte");
         //
     }
-    }
+}
