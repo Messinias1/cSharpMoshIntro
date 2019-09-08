@@ -16,29 +16,38 @@ class helloworld
     static void Main(string[] args)
         {
 
-        // If the value is above the speed limit, the program should calculate the number of demerit points. For every 5km/hr above the speed limit, 1 demerit points should be incurred and displayed on the console
+        //  Write a program to count how many numbers between 1 and 100 are divisible by 3 with no remainder. Display the count on the console.
 
-        Console.WriteLine("Enter Speed Limit");
-        var speedLimit = Convert.ToInt32(Console.ReadLine());
-
-        Console.WriteLine("Enter Car Speed");
-        var carSpeed = Convert.ToInt32(Console.ReadLine());
-
-        var demerit = 5;
-        var points = (carSpeed - speedLimit) / demerit;
-        if (carSpeed < speedLimit)
+        for (var i = 0; i < 100; i++)
         {
-            Console.WriteLine("OK");
-        }
-        else if (carSpeed > speedLimit)
-        {
-            Console.WriteLine(points);
+            if(i%3 == 0)
+            {
+                Console.WriteLine(i);
+            }
         }
 
-        if (points > 12)
-        {
-            Console.WriteLine("License Suspended");
-        }
+
+        //Console.WriteLine("Enter Speed Limit");
+        //var speedLimit = Convert.ToInt32(Console.ReadLine());
+
+        //Console.WriteLine("Enter Car Speed");
+        //var carSpeed = Convert.ToInt32(Console.ReadLine());
+
+        //var demerit = 5;
+        //var points = (carSpeed - speedLimit) / demerit;
+        //if (carSpeed < speedLimit)
+        //{
+        //    Console.WriteLine("OK");
+        //}
+        //else if (carSpeed > speedLimit)
+        //{
+        //    Console.WriteLine(points);
+        //}
+
+        //if (points > 12)
+        //{
+        //    Console.WriteLine("License Suspended");
+        //}
 
         // Write a program and ask the user to enter the width and height of an image. Then tell if the image is landscape or portrait. landscape = wider portrait = taller
 
