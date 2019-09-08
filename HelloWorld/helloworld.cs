@@ -16,22 +16,46 @@ class helloworld
     static void Main(string[] args)
         {
 
+        // If the value is above the speed limit, the program should calculate the number of demerit points. For every 5km/hr above the speed limit, 1 demerit points should be incurred and displayed on the console
+
+        Console.WriteLine("Enter Speed Limit");
+        var speedLimit = Convert.ToInt32(Console.ReadLine());
+
+        Console.WriteLine("Enter Car Speed");
+        var carSpeed = Convert.ToInt32(Console.ReadLine());
+
+        var demerit = 5;
+        var points = (carSpeed - speedLimit) / demerit;
+        if (carSpeed < speedLimit)
+        {
+            Console.WriteLine("OK");
+        }
+        else if (carSpeed > speedLimit)
+        {
+            Console.WriteLine(points);
+        }
+
+        if (points > 12)
+        {
+            Console.WriteLine("License Suspended");
+        }
+
         // Write a program and ask the user to enter the width and height of an image. Then tell if the image is landscape or portrait. landscape = wider portrait = taller
 
-        Console.WriteLine("Enter image height");
-        var height = Console.ReadLine();
+        //Console.WriteLine("Enter image height");
+        //var height = Console.ReadLine();
 
-        Console.WriteLine("Enter image width");
-        var width = Console.ReadLine();
+        //Console.WriteLine("Enter image width");
+        //var width = Console.ReadLine();
 
-        if(Int32.Parse(height) > Int32.Parse(width))
-        {
-            Console.WriteLine("Image is a Portrait");
-        }
-        else if(Int32.Parse(width) > Int32.Parse(height))
-        {
-            Console.WriteLine("Image is a Landscape");
-        }
+        //if(Int32.Parse(height) > Int32.Parse(width))
+        //{
+        //    Console.WriteLine("Image is a Portrait");
+        //}
+        //else if(Int32.Parse(width) > Int32.Parse(height))
+        //{
+        //    Console.WriteLine("Image is a Landscape");
+        //}
 
         //Console.WriteLine("Enter a number");
         //var input = Console.ReadLine();
