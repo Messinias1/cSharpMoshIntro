@@ -1,5 +1,6 @@
 ﻿using HelloWorld.Math;
 using HelloWorld.Exercises;
+using System.Linq;
 using System;
 
 namespace HelloWorld
@@ -63,28 +64,40 @@ class helloworld
 
         // Write a program that picks a random number between 1 and 10. Give the user 4 chances to guess the number. If the user guesses the number, display “You won"; otherwise, display “You lost". (To make sure the program is behaving correctly, you can display the secret number on the console first.)
 
-        void Exercise4()
+        //        void Exercise4()
+        //        {
+        //            var random = new Random();
+        //            int correctNumber = random.Next(1, 10);
+        //            Console.WriteLine(correctNumber);
+
+        //            for (var attempts = 0; attempts < 4; attempts++)
+        //            {
+        //                Console.WriteLine("Guess a number between 1 and 10: ");
+        //                var input = Convert.ToInt32(Console.ReadLine());
+
+        //            if (input == correctNumber)
+        //            {
+        //                Console.WriteLine("You Won");
+        //                    break;
+        //            }
+        //        }
+        //            Console.WriteLine("man guesses exceeded");
+        //    }
+        //Exercise4();
+
+        //5 - Write a program and ask the user to enter a series of numbers separated by comma.Find the maximum of the numbers and display it on the console. For example, if the user enters “5, 3, 8, 1, 4", the program should display 8.
+
+        void Exercise5()
         {
-            var random = new Random();
-            int correctNumber = random.Next(1, 10);
-            Console.WriteLine(correctNumber);
+            Console.WriteLine("Enter a series of numbers, seperated by a comma");
+            var input = Console.ReadLine().Split(',').Take(4);
 
-            for (var attempts = 0; attempts < 4; attempts++)
-            {
-                Console.WriteLine("Guess a number between 1 and 10: ");
-                var input = Convert.ToInt32(Console.ReadLine());
+            int[] digits = input.Select(d => Convert.ToInt32(d)).ToArray();
 
-            if (input == correctNumber)
-            {
-                Console.WriteLine("You Won");
-                    break;
-            }
+
+            Console.WriteLine(digits.Max());
         }
-            Console.WriteLine("man guesses exceeded");
-    }
-Exercise4();
-
-
+        Exercise5();
 
         //Console.WriteLine("Enter Speed Limit");
         //var speedLimit = Convert.ToInt32(Console.ReadLine());
