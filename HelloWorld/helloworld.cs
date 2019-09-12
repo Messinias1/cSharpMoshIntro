@@ -48,18 +48,41 @@ class helloworld
 
         // Write a program and ask the user to enter a number. Compute the factorial of the number and print it on the console. For example, if the user enters 5, the program should calculate 5 x 4 x 3 x 2 x 1 and display it as 5! = 120.
 
-        void Exercise3()
-        {
-            Console.WriteLine("Enter a number");
-            var input = Convert.ToInt32(Console.ReadLine());
+        //void Exercise3()
+        //{
+        //    Console.WriteLine("Enter a number");
+        //    var input = Convert.ToInt32(Console.ReadLine());
 
-            for (var i = input - 1; i >= 1; i--)
+        //    for (var i = input - 1; i >= 1; i--)
+        //    {
+        //        input = input * i;
+        //    }
+        //    Console.WriteLine("\nFactorial of Given Number is: " + input);
+        //}
+        //Exercise3();
+
+        // Write a program that picks a random number between 1 and 10. Give the user 4 chances to guess the number. If the user guesses the number, display “You won"; otherwise, display “You lost". (To make sure the program is behaving correctly, you can display the secret number on the console first.)
+
+        void Exercise4()
+        {
+            var random = new Random();
+            int correctNumber = random.Next(1, 10);
+            Console.WriteLine(correctNumber);
+
+            for (var attempts = 0; attempts < 4; attempts++)
             {
-                input = input * i;
+                Console.WriteLine("Guess a number between 1 and 10: ");
+                var input = Convert.ToInt32(Console.ReadLine());
+
+            if (input == correctNumber)
+            {
+                Console.WriteLine("You Won");
+                    break;
             }
-            Console.WriteLine("\nFactorial of Given Number is: " + input);
         }
-        Exercise3();
+            Console.WriteLine("man guesses exceeded");
+    }
+Exercise4();
 
 
 
