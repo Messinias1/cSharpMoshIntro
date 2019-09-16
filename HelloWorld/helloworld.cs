@@ -26,40 +26,53 @@ class helloworld
         //If more than two people like your post, it displays: [Friend 1], [Friend 2] and[Number of Other People] others like your post.
         //Write a program and continuously ask the user to enter different names, until the user presses Enter (without supplying a name). Depending on the number of names provided, display a message based on the above pattern.
 
-        void Exercise1()
+        //void Exercise1()
+        //{
+        //    var likes = new List<string>();
+
+        //    while (true)
+        //    {
+        //        Console.WriteLine("Enter a name");
+        //        var input = Console.ReadLine();
+
+        //        if (input == "")
+        //        {
+        //            break;
+        //        }
+
+        //        likes.Add(input);
+
+        //        var remainingLikes = likes.Count - 2;
+        //        var s = remainingLikes.ToString();
+
+        //        if (likes.Count == 1)
+        //        {
+        //            Console.WriteLine("{0} liked your post", likes[0]);
+        //        }
+        //        else if (likes.Count == 2)
+        //        {
+        //            Console.WriteLine("{0} and {1} liked your post", likes[0], likes[1]);
+        //        }
+        //        else if (likes.Count > 2)
+        //        {
+        //            Console.WriteLine("{0}, {1}, and {2} other(s) liked your post", likes[0], likes[1], s);
+        //        }
+        //    }
+        //}
+        //Exercise1();
+
+        //2 - Write a program and ask the user to enter their name. Use an array to reverse the name and then store the result in a new string.Display the reversed name on the console.
+
+        void Exercise2()
         {
-            var likes = new List<string>();
+            Console.WriteLine("Enter your name");
+            var input = Console.ReadLine().ToArray();
 
-            while (true)
-            {
-                Console.WriteLine("Enter a name");
-                var input = Console.ReadLine();
-
-                if (input == "")
-                {
-                    break;
-                }
-
-                likes.Add(input);
-
-                var remainingLikes = likes.Count - 2;
-                var s = remainingLikes.ToString();
-
-                if (likes.Count == 1)
-                {
-                    Console.WriteLine("{0} liked your post", likes[0]);
-                }
-                else if (likes.Count == 2)
-                {
-                    Console.WriteLine("{0} and {1} liked your post", likes[0], likes[1]);
-                }
-                else if (likes.Count > 2)
-                {
-                    Console.WriteLine("{0}, {1}, and {2} other(s) liked your post", likes[0], likes[1], s);
-                }
-            }
+            Array.Reverse(input);
+            var reversed = string.Join("", input);
+            Console.WriteLine(reversed);
         }
-        Exercise1();
+        Exercise2();
 
         //  Write a program to count how many numbers between 1 and 100 are divisible by 3 with no remainder. Display the count on the console.
 
