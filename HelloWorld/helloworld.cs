@@ -63,16 +63,33 @@ class helloworld
 
         //2 - Write a program and ask the user to enter their name. Use an array to reverse the name and then store the result in a new string.Display the reversed name on the console.
 
-        void Exercise2()
-        {
-            Console.WriteLine("Enter your name");
-            var input = Console.ReadLine().ToArray();
+        //void Exercise2()
+        //{
+        //    Console.WriteLine("Enter your name");
+        //    var input = Console.ReadLine().ToArray();
 
-            Array.Reverse(input);
-            var reversed = string.Join("", input);
-            Console.WriteLine(reversed);
+        //    Array.Reverse(input);
+        //    var reversed = string.Join("", input);
+        //    Console.WriteLine(reversed);
+        //}
+        //Exercise2();
+
+        //3 - Write a program and ask the user to enter 5 numbers.If a number has been previously entered, display an error message and ask the user to re-try. Once the user successfully enters 5 unique numbers, sort them and display the result on the console.
+
+        void Exercise3()
+        {
+            while (true)
+            {
+                Console.WriteLine("Enter 5 numbers (one at a time)");
+                var input = Console.ReadLine().ToArray();
+
+                foreach(var number in input)
+                {
+                    Console.WriteLine(number);
+                }
+            }
         }
-        Exercise2();
+        Exercise3();
 
         //  Write a program to count how many numbers between 1 and 100 are divisible by 3 with no remainder. Display the count on the console.
 
