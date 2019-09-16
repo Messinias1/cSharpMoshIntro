@@ -2,6 +2,7 @@
 using HelloWorld.Exercises;
 using System.Linq;
 using System;
+using System.Collections.Generic;
 
 namespace HelloWorld
 {
@@ -16,6 +17,49 @@ class helloworld
     {
     static void Main(string[] args)
         {
+
+        //        1 - When you post a message on Facebook, depending on the number of people who like your post, Facebook displays different information.
+
+        //If no one likes your post, it doesn't display anything.
+        //If only one person likes your post, it displays: [Friend's Name] likes your post.
+        //If two people like your post, it displays: [Friend 1] and[Friend 2] like your post.
+        //If more than two people like your post, it displays: [Friend 1], [Friend 2] and[Number of Other People] others like your post.
+        //Write a program and continuously ask the user to enter different names, until the user presses Enter (without supplying a name). Depending on the number of names provided, display a message based on the above pattern.
+
+        void Exercise1()
+        {
+            var likes = new List<string>();
+
+            while (true)
+            {
+                Console.WriteLine("Enter a name");
+                var input = Console.ReadLine();
+
+                if (input == "")
+                {
+                    break;
+                }
+
+                likes.Add(input);
+
+                var remainingLikes = likes.Count - 2;
+                var s = remainingLikes.ToString();
+
+                if (likes.Count == 1)
+                {
+                    Console.WriteLine("{0} liked your post", likes[0]);
+                }
+                else if (likes.Count == 2)
+                {
+                    Console.WriteLine("{0} and {1} liked your post", likes[0], likes[1]);
+                }
+                else if (likes.Count > 2)
+                {
+                    Console.WriteLine("{0}, {1}, and {2} other(s) liked your post", likes[0], likes[1], s);
+                }
+            }
+        }
+        Exercise1();
 
         //  Write a program to count how many numbers between 1 and 100 are divisible by 3 with no remainder. Display the count on the console.
 
@@ -34,7 +78,7 @@ class helloworld
         //    var total = 0;
         //    while (true)
         //    {
-        //        Console.WriteLine("Enter a number (or 'ok' to exit): ");
+        //        Console.WriteLine("enter a number (or 'ok' to exit): ");
         //        var input = Console.ReadLine();
 
         //        if (input.ToLower() == "ok")
@@ -42,7 +86,7 @@ class helloworld
 
         //        total += Convert.ToInt32(input);
         //    }
-        //    Console.WriteLine("Total of all entered numbers: " + total);
+        //    Console.WriteLine("total of all entered numbers: " + total);
         //}
 
         //Exercise2();
@@ -87,17 +131,17 @@ class helloworld
 
         //5 - Write a program and ask the user to enter a series of numbers separated by comma.Find the maximum of the numbers and display it on the console. For example, if the user enters “5, 3, 8, 1, 4", the program should display 8.
 
-        void Exercise5()
-        {
-            Console.WriteLine("Enter a series of numbers, seperated by a comma");
-            var input = Console.ReadLine().Split(',').Take(4);
+        //void Exercise5()
+        //{
+        //    Console.WriteLine("Enter a series of numbers, seperated by a comma");
+        //    var input = Console.ReadLine().Split(',');
 
-            int[] digits = input.Select(d => Convert.ToInt32(d)).ToArray();
+        //    int[] digits = input.Select(d => Convert.ToInt32(d)).ToArray();
 
 
-            Console.WriteLine(digits.Max());
-        }
-        Exercise5();
+        //    Console.WriteLine(digits.Max());
+        //}
+        //Exercise5();
 
         //Console.WriteLine("Enter Speed Limit");
         //var speedLimit = Convert.ToInt32(Console.ReadLine());
